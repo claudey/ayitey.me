@@ -1,0 +1,18 @@
+    @import "screen";
+    body {
+        background: #D3F4C2;
+        width: 100%;
+    }
+    
+    .site {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    
+    section {
+        max-width: 100%;
+        background: white;
+        /* Rectangle: */
+        background: #FFFFFF;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
+    }
