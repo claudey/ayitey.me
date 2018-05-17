@@ -8,38 +8,12 @@
  */
 
 if ( ! function_exists( 'claude_ayitey_setup' ) ) :
-	/**
-	 * Sets up theme defaults and registers support for various WordPress features.
-	 *
-	 * Note that this function is hooked into the after_setup_theme hook, which
-	 * runs before the init hook. The init hook is too late for some features, such
-	 * as indicating support for post thumbnails.
-	 */
+
 	function claude_ayitey_setup() {
-		/*
-		 * Make theme available for translation.
-		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on cayitey, use a find and replace
-		 * to change 'claude-ayitey' to the name of your theme in all the template files.
-		 */
+
 		load_theme_textdomain( 'claude-ayitey', get_template_directory() . '/languages' );
-
-		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
-
-		/*
-		 * Let WordPress manage the document title.
-		 * By adding theme support, we declare that this theme does not use a
-		 * hard-coded <title> tag in the document head, and expect WordPress to
-		 * provide it for us.
-		 */
 		add_theme_support( 'title-tag' );
-
-		/*
-		 * Enable support for Post Thumbnails on posts and pages.
-		 *
-		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-		 */
 		add_theme_support( 'post-thumbnails' );
 
 		// This theme uses wp_nav_menu() in one location.
@@ -47,10 +21,6 @@ if ( ! function_exists( 'claude_ayitey_setup' ) ) :
 			'menu-1' => esc_html__( 'Primary', 'claude-ayitey' ),
 		) );
 
-		/*
-		 * Switch default core markup for search form, comment form, and comments
-		 * to output valid HTML5.
-		 */
 		add_theme_support( 'html5', array(
 			'search-form',
 			'comment-form',
@@ -130,29 +100,10 @@ function claude_ayitey_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'claude_ayitey_scripts' );
 
-/**
- * Implement the Custom Header feature.
- */
 require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
 require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Functions which enhance the theme by hooking into WordPress.
- */
 require get_template_directory() . '/inc/template-functions.php';
-
-/**
- * Customizer additions.
- */
 require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
@@ -163,3 +114,60 @@ function filter_ptags_on_images($content){
 }
 
 add_filter('the_content', 'filter_ptags_on_images');
+
+
+/*
+* Creating a function to create our CPT
+*/
+function custom_post_type() {
+// Set UI labels for Custom Post Type
+    $labels = array(
+        'name'                => _x( 'Projects', 'Post Type General Name', 'claude-ayitey' ),
+        'singular_name'       => _x( 'Project', 'Post Type Singular Name', 'claude-ayitey' ),
+        'menu_name'           => __( 'Projects', 'claude-ayitey' ),
+        'parent_item_colon'   => __( 'Parent Project', 'claude-ayitey' ),
+        'all_items'           => __( 'All Projects', 'claude-ayitey' ),
+        'view_item'           => __( 'View project', 'claude-ayitey' ),
+        'add_new_item'        => __( 'Add New project', 'claude-ayitey' ),
+        'add_new'             => __( 'Add New', 'claude-ayitey' ),
+        'edit_item'           => __( 'Edit project', 'claude-ayitey' ),
+        'update_item'         => __( 'Update project', 'claude-ayitey' ),
+        'search_items'        => __( 'Search project', 'claude-ayitey' ),
+        'not_found'           => __( 'Not Found', 'claude-ayitey' ),
+        'not_found_in_trash'  => __( 'Not found in Trash', 'claude-ayitey' ),
+    );
+// Set other options for Custom Post Type
+    $args = array(
+        'label'               => __( 'projects', 'claude-ayitey' ),
+        'description'         => __( 'Projects', 'claude-ayitey' ),
+        'labels'              => $labels,
+        // Features this CPT supports in Post Editor
+        'supports'            => array( 'title', 'editor', 'thumbnail', 'revisions'),
+        // You can associate this CPT with a taxonomy or custom taxonomy.
+        'taxonomies'          => array( 'events' ),
+        /* A hierarchical CPT is like Pages and can have
+        * Parent and child items. A non-hierarchical CPT
+        * is like Posts.
+        */ 
+        'hierarchical'        => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'page',
+    );
+    // Registering your Custom Post Type
+    register_post_type( 'projects', $args );
+ }
+/* Hook into the 'init' action so that the function
+* Containing our post type registration is not
+* unnecessarily executed.
+*/
+
+add_action( 'init', 'custom_post_type', 0 );
