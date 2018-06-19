@@ -56,6 +56,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/assets\/images\/claude-ayitey.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 30294,
+		"inputAbbreviatedPath": "\/assets\/images\/claude-ayitey.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/claude-ayitey.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/sass\/cayitey.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,

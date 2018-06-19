@@ -26,8 +26,9 @@
 
 	<header class="site-header">
 		<div class="site-branding">
-			<?php the_custom_logo();?>
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<img class="site-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/claude-ayitey-logo.svg"/>
+			</a>
 		</div>
 
 		<nav class="main-navigation">
@@ -40,4 +41,4 @@
 		</nav>
 	</header>
 
-	<div id="content" class="site-content">
+	<div class="site-content">

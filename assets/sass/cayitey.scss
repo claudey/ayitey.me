@@ -19,6 +19,8 @@ body {
     min-width: 200px;
 }
 
+.site-logo {}
+
 .main-navigation {
     display: flex;
     justify-content: flex-end;
@@ -32,14 +34,15 @@ body {
 
 .site {
     max-width: 960px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 section {
     max-width: 100%;
     background: #FFFFFF;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
-    padding: 60px;
+    padding: 50px;
+    margin-bottom: 40px;
 }
 
 .alignnone.size-full {
@@ -63,8 +66,34 @@ p img {
     margin: 0 auto;
 }
 
+.home--intro {
+    min-height: 400px;
+    background-image: url(../images/claude-ayitey.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-left: 50%;
+}
+
+.home--intro__heading {
+    font-size: 3em;
+    color: #fff;
+    background: #685097;
+    width: max-content;
+    padding: 0.2em 1.5em 0.2em 0.6em;
+    margin-bottom: 40px;
+}
+
+.home--intro__content {
+    margin-left: 50px;
+    display: inline-block;
+}
+
+.home--projects {}
+
+.home--posts {}
+
 footer {
-    margin-bottom: 60px;
+    margin: 20px 0 60px;
     text-align: center;
 }
 
