@@ -1,0 +1,1 @@
+var colorRand=Math.floor(10*Math.random())+245,colArray=[colorRand,245,255];colArray.sort(function(){return.5-Math.random()}),document.body.style.background="rgb("+colArray[0]+", "+colArray[1]+", "+colArray[2]+")";

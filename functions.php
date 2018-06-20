@@ -91,6 +91,7 @@ function claude_ayitey_scripts() {
 	wp_enqueue_style( 'main-style', get_template_directory_uri() . '/assets/css/cayitey.css' );
 
 	wp_enqueue_script( 'claude-ayitey-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'claude-ayitey-main-js', get_template_directory_uri() . '/assets/js/min/cayitey-min.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'claude-ayitey-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
