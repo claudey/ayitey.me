@@ -20,17 +20,21 @@ get_header(); ?>
             ?>
 
 
-
             <section class="home--intro">
-                <h2 class="home--intro__heading">Claude Ayitey</h2>
+                <h2 class="header--title home--intro__heading">Claude Ayitey</h2>
                 <span class="home--intro__content">
                     <?php echo $bio_content; ?>
                 </span>
             </section>
 
-            <section>projects</section>
-
-            <section>posts</section>
+            <section class="home--projects">
+                <h2 class="header--title home--projects__heading">Projects</h2>                
+            </section>
+            
+            <section class="home--posts">
+                <h2 class="header--title home--posts__heading">Writings</h2>                
+                
+            </section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

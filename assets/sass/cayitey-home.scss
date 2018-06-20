@@ -1,0 +1,30 @@
+.home--intro {
+    min-height: 400px;
+    background-image: url(../images/claude-ayitey.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-left: 50%;
+}
+
+.home--intro__heading {
+    background: #685097;
+}
+
+.home--intro__content {
+    margin-left: 50px;
+    display: inline-block;
+}
+
+.home--projects {}
+
+.home--projects__heading {
+    background: #507B97;
+    margin-left: -50px;
+}
+
+.home--posts {}
+
+.home--posts__heading {
+    background: #975065;
+    margin-left: -50px;
+}

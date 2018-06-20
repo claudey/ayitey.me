@@ -37,6 +37,23 @@ body {
     margin: 20px auto;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+.header--title {
+    color: #fff;
+    font-size: 3em;
+    width: max-content;
+    padding: 0.2em 1.5em 0.2em 0.6em;
+    margin-bottom: 40px;
+}
+
 section {
     max-width: 100%;
     background: #FFFFFF;
@@ -66,32 +83,9 @@ p img {
     margin: 0 auto;
 }
 
-.home--intro {
-    min-height: 400px;
-    background-image: url(../images/claude-ayitey.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    padding-left: 50%;
-}
-
-.home--intro__heading {
-    font-size: 3em;
-    color: #fff;
-    background: #685097;
-    width: max-content;
-    padding: 0.2em 1.5em 0.2em 0.6em;
-    margin-bottom: 40px;
-}
-
-.home--intro__content {
-    margin-left: 50px;
-    display: inline-block;
-}
-
-.home--projects {}
-
-.home--posts {}
-
+@import "cayitey-home";
+@import "cayitey-posts";
+@import "cayitey-projects";
 footer {
     margin: 20px 0 60px;
     text-align: center;
