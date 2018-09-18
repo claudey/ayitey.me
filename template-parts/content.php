@@ -29,7 +29,6 @@
 
 	<?php claude_ayitey_post_thumbnail(); ?>
 
-	just one post
 	<div class="entry-content">
 		<?php
 			the_content( sprintf(

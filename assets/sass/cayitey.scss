@@ -19,7 +19,7 @@ body {
 }
 
 .site-branding {
-    min-width: 200px;
+    min-width: 100px;
 }
 
 .site-logo {}
@@ -32,7 +32,8 @@ body {
 .site-title,
 .menu-item {
     padding: 5px 10px;
-    margin: 0 10px;
+    margin: 0;
+    display: inline-block;
 }
 
 .site {

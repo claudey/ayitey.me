@@ -24,12 +24,10 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'claude-ayitey' ); ?></a>
 
-	<header class="site-header">
-		<div class="site-branding">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<img class="site-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/claude-ayitey-logo.svg"/>
-			</a>
-		</div>
+	<menu class="site-header">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-branding">
+			<img class="site-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/claude-ayitey-logo.svg"/>
+		</a>
 
 		<nav class="main-navigation">
 			<?php
@@ -39,6 +37,6 @@
 				) );
 			?>
 		</nav>
-	</header>
+	</menu>
 
 	<div class="site-content">
