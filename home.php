@@ -1,7 +1,10 @@
 <?php
 /**
+ * cayitey functions and definitions
  *
- * @package DevCongress eXchange
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ *
+ * @package cayitey
  */
 
 get_header(); ?>
@@ -18,8 +21,8 @@ get_header(); ?>
 					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $include[0]->ID ), 'single-post-thumbnail' );
 				endif;
             ?>
-
-
+            
+            <!-- FIRST SECTION - Name, Description -->
             <section class="home--intro">
                 <h2 class="header--title home--intro__heading">Claude Ayitey</h2>
                 <span class="home--intro__content">
@@ -27,13 +30,45 @@ get_header(); ?>
                 </span>
             </section>
 
+            <!-- SECOND SECTION - Projects -->
             <section class="home--projects">
-                <h2 class="header--title home--projects__heading">Projects</h2>                
+                <h2 class="header--title home--projects__heading">Projects</h2>
+                <span class="home--projects__content">These are some projects I’ve worked on; all being side projects.</span>  
+                <div class="projects--list">
+                    <?php 
+                    $args = array(  'post_type' => 'projects',
+                                    'posts_per_page'=> 3
+                                );
+                    $loop = new WP_Query( $args );
+                    while ($loop->have_posts()):
+                        $loop->the_post(); ?>
+                        <a href="<?php the_permalink(); ?>" class="projects--list__item">
+                            <img class="projects--list__icon" src=<?php the_post_thumbnail(); ?>
+                            <h3 class="projects--list__title"><?php the_title(); ?></h3>
+                        </a>
+                    <? endwhile; ?>
+                </div>
             </section>
             
+            <!-- THIRD SECTION - Writings -->
             <section class="home--posts">
                 <h2 class="header--title home--posts__heading">Writings</h2>                
-                
+                <?php 
+                $args = array(  'post_type' => 'post',
+                                'posts_per_page'=> 3
+                            );
+                $loop = new WP_Query( $args );
+                while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                    <div class="post--snippet">
+                        <img class="post--snippet__thumbnail" src=<?php the_post_thumbnail('full'); ?>
+                        <p class="post--snippet_date"><? echo get_the_date('Y-m-d'); ?></p>
+                        <a href="<?php the_permalink(); ?>" class="post--snippet_title"><?php the_title(); ?></a>
+                    </div>
+                    
+                    
+                    
+                <? endwhile;
+                ?>
             </section>
 
 		</main><!-- #main -->

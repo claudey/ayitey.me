@@ -1,13 +1,13 @@
 .home--intro {
     min-height: 400px;
-    background-image: url(../images/claude-ayitey.jpg);
+    background: url(../images/claude-ayitey.jpg), #C3CFDD;
     background-repeat: no-repeat;
     background-size: contain;
     padding-left: 50%;
 }
 
 .home--intro__heading {
-    background: #685097;
+    background: $ca-mauve;
 }
 
 .home--intro__content {
@@ -18,13 +18,60 @@
 .home--projects {}
 
 .home--projects__heading {
-    background: #507B97;
+    background: $ca-dblue;
     margin-left: -50px;
 }
 
 .home--posts {}
 
 .home--posts__heading {
-    background: #975065;
+    background: $ca-wine;
     margin-left: -50px;
 }
+
+.projects--list {
+    margin-top: 30px;
+}
+
+.projects--list__item {
+    text-decoration: none;
+    max-width: 30%;
+    display: inline-block;
+    margin-right: 4.4%;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.projects--list__icon {
+    filter: grayscale(100%);
+}
+
+.projects--list__title {
+    transition: all 3.5ms ease;
+    color: #404040;
+    font-size: 1.2em;
+    &:hover {
+        color: $ca-dblue;
+    }
+}
+
+.post--snippet {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.post--snippet__thumbnail {
+    float: left;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.post--snippet__date {
+    display: block;
+}
+
+.post--snippet__title {}
