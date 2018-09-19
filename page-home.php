@@ -52,7 +52,7 @@ get_header(); ?>
             
             <!-- THIRD SECTION - Writings -->
             <section class="home--posts">
-                <h2 class="header--title home--posts__heading">Writings</h2>                
+                <h2 class="header--title home--posts__heading">Posts</h2>                
                 <?php 
                 $args = array(  'post_type' => 'post',
                                 'posts_per_page'=> 3
