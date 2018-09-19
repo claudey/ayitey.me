@@ -30,7 +30,9 @@
 }
 
 .projects--list {
-    margin-top: 30px;
+    margin: 30px 0 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .projects--list__item {
@@ -49,8 +51,9 @@
 
 .projects--list__title {
     transition: all 3.5ms ease;
-    color: #404040;
+    color: $ca-mauve;
     font-size: 1.2em;
+    line-height: 1.2;
     &:hover {
         color: $ca-dblue;
     }

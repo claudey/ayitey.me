@@ -35,6 +35,7 @@
     .home--intro {
         background-size: contain;
         background-position: top center;
+        background-color: #ffffff;
         padding: 72vw 0 0 0;
     }
     .home--intro__heading {
@@ -44,5 +45,19 @@
     .home--intro__content {
         padding: 5%;
         margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects--list {
+        display: inline-block;
+    }
+    .projects--list__item {
+        float: left;
+        max-width: 45%;
+        margin: 0 9% 20px 0;
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
     }
 }
