@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all single posts
+ * The template for displaying all single projects
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
@@ -9,29 +9,43 @@
 
 get_header(); ?>
 
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
 		<section>
-		<?php
-		while ( have_posts() ) : the_post();
+			<?php while ( have_posts() ) : the_post();
+			
+				the_title( '<h1 class="section--title section--title__dblue">', '</h1>' ); ?>
+			
+				<div class="section--body">
+					<?php claude_ayitey_post_thumbnail(); ?>
 
-			get_template_part( 'template-parts/content', get_post_type() );
+					<div class="entry-content">
+					<?php
+						the_content();
 
-			the_post_navigation();
+						wp_link_pages( array(
+							'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'claude-ayitey' ),
+							'after'  => '</div>',
+						) );
+					?>
+					</div><!-- .entry-content -->
+				</div><!-- .section--body -->
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+			<?php 
+				// the_post_navigation();
 
-		endwhile; // End of the loop.
-		?>
+				// If comments are open or we have at least one comment, load up the comment template.
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
+				endif;
+
+			endwhile; ?>
 		</section>
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-// get_sidebar();
-get_footer();
+get_footer(); ?>
+</article><!-- #post-<?php the_ID(); ?> -->

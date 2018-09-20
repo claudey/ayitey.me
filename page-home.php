@@ -32,27 +32,31 @@ get_header(); ?>
 
             <!-- SECOND SECTION - Projects -->
             <section class="home--projects">
-                <h2 class="header--title home--projects__heading">Projects</h2>
-                <span class="home--projects__content">These are some projects I’ve worked on; all being side projects.</span>  
-                <div class="projects--list">
-                    <?php 
-                    $args = array(  'post_type' => 'projects',
-                                    'posts_per_page'=> 3
-                                );
-                    $loop = new WP_Query( $args );
-                    while ($loop->have_posts()):
-                        $loop->the_post(); ?>
-                        <a href="<?php the_permalink(); ?>" class="projects--list__item">
-                            <img class="projects--list__icon" src=<?php the_post_thumbnail(); ?>
-                            <h3 class="projects--list__title"><?php the_title(); ?></h3>
-                        </a>
-                    <? endwhile; ?>
+                <h2 class="section--title section--title__dblue">Projects</h2>
+                <div class="section--body">
+                    <span class="home--projects__content">These are some projects I’ve worked on; all being side projects.</span>  
+                    <div class="projects--list">
+                        <?php 
+                        $args = array(  'post_type' => 'projects',
+                                        'posts_per_page'=> 3
+                                    );
+                        $loop = new WP_Query( $args );
+                        while ($loop->have_posts()):
+                            $loop->the_post(); ?>
+                            <a href="<?php the_permalink(); ?>" class="projects--list__item">
+                                <img class="projects--list__icon" src=<?php the_post_thumbnail(); ?>
+                                <h3 class="projects--list__title"><?php the_title(); ?></h3>
+                            </a>
+                        <? endwhile; ?>
+                    </div>
                 </div>
             </section>
             
             <!-- THIRD SECTION - Writings -->
             <section class="home--posts">
-                <h2 class="header--title home--posts__heading">Posts</h2>                
+                <h2 class="section--title section--title__wine">Posts</h2>                
+                
+                <div class="section--body">
                 <?php 
                 $args = array(  'post_type' => 'post',
                                 'posts_per_page'=> 3
@@ -61,14 +65,15 @@ get_header(); ?>
                 while ( $loop->have_posts() ) : $loop->the_post(); ?>
                     <div class="post--snippet">
                         <img class="post--snippet__thumbnail" src=<?php the_post_thumbnail('full'); ?>
-                        <p class="post--snippet_date"><? echo get_the_date('Y-m-d'); ?></p>
-                        <a href="<?php the_permalink(); ?>" class="post--snippet_title"><?php the_title(); ?></a>
+                        <p class="post--snippet__date"><? echo get_the_date('Y-m-d'); ?></p>
+                        <a href="<?php the_permalink(); ?>" class="post--snippet__title"><?php the_title(); ?></a>
                     </div>
                     
                     
                     
                 <? endwhile;
                 ?>
+                </div>
             </section>
 
 		</main><!-- #main -->

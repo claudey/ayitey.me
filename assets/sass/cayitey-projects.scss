@@ -1,0 +1,30 @@
+.projects--list {
+    margin: 30px 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.projects--list__item {
+    text-decoration: none;
+    max-width: 30%;
+    display: inline-block;
+    margin-right: 4.4%;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.projects--list__icon {
+    filter: grayscale(100%);
+}
+
+.projects--list__title {
+    transition: all 3.5ms ease;
+    color: $ca-mauve;
+    margin-top: 0.3em;
+    font-size: 1.2em;
+    line-height: 1.2;
+    &:hover {
+        color: $ca-dblue;
+    }
+}

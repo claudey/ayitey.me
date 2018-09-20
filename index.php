@@ -28,12 +28,15 @@ get_header(); ?>
 			endif; ?>
 
 			<section>
-				Posts
-			<?php while ( have_posts() ) : the_post();
+				<h1 class="section--title section--title__wine">Posts</h1>
 
-				get_template_part( 'template-parts/content', 'post' );
+				<div class="section--body">
+					<?php while ( have_posts() ) : the_post();
 
-			endwhile; ?>
+						get_template_part( 'template-parts/content', 'post' );
+
+					endwhile; ?>
+				</div>
 
 			</section>
 
