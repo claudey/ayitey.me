@@ -14,12 +14,11 @@ get_header(); ?>
 		<main id="main" class="site-main">
 
 		<section>
-			<?php while ( have_posts() ) : the_post();
-			
-				the_title( '<h1 class="section--title section--title__dblue">', '</h1>' ); ?>
-			
+			<?php while ( have_posts() ) : the_post(); ?>
+				<header class="entry-header section--header" >
+				<?php the_title( '<h1 class="section--title section--title__dblue">', '</h1>' ); ?>
+				</header>
 				<div class="section--body">
-					<?php claude_ayitey_post_thumbnail(); ?>
 
 					<div class="entry-content">
 					<?php
