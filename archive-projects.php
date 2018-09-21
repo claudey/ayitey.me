@@ -18,20 +18,20 @@ get_header(); ?>
 
 				the_archive_description( '<h1 class="section--title section--title__dblue">', '</h1>' ); ?>
 				
-				<div class="section--body">
+				<div class="section--body projects--list">
 				
-				<?php
-				while ( have_posts() ) : the_post();
-				
-					get_template_part( 'template-parts/content', 'projects' );
+					<?php
+					while ( have_posts() ) : the_post();
 					
-				endwhile;
-			
-				// the_posts_navigation();
-			
-				?>
+						get_template_part( 'template-parts/content', 'projects' );
+						
+					endwhile;
+				
+					// the_posts_navigation();
+				
+					?>
+					</div>
 
-			</div>
 		</section>
 
 		</main><!-- #main -->

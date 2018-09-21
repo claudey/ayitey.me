@@ -72,7 +72,8 @@ h2 {
 }
 
 section {
-    max-width: 100%;
+    display: inline-block;
+    width: 100%;
     background: #FFFFFF;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
     padding-top: 50px;
@@ -142,6 +143,14 @@ section {
 
 .entry-content li {
     margin: 0.3em 5em 0.3em 3em;
+}
+
+blockquote {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 1em 6em 1em 3em;
+    padding: 0.3em 0 0 2em;
+    font-style: italic;
+    background: url(../images/quotes.svg) no-repeat;
 }
 
 p img {

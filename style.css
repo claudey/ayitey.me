@@ -190,14 +190,11 @@ i {
     font-style: italic;
 }
 
-blockquote {
-    margin: 0 1.5em;
-}
 
+}
 address {
     margin: 0 0 1.5em;
 }
-
 pre {
     background: #eee;
     font-family: "Courier 10 Pitch", Courier, monospace;
@@ -209,7 +206,6 @@ pre {
     overflow: auto;
     padding: 1.6em;
 }
-
 code,
 kbd,
 tt,
@@ -218,91 +214,74 @@ var {
     font-size: 15px;
     font-size: 0.9375rem;
 }
-
 abbr,
 acronym {
     border-bottom: 1px dotted #666;
     cursor: help;
 }
-
 html {
     box-sizing: border-box;
 }
-
 *,
 *:before,
 *:after {
     /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+    
     box-sizing: inherit;
 }
-
 hr {
     background-color: #ccc;
     border: 0;
     height: 1px;
     margin-bottom: 1.5em;
 }
-
 ul,
 ol {
     margin: 0 0 1.5em 3em;
 }
-
 ul {
     list-style: disc;
 }
-
 ol {
     list-style: decimal;
 }
-
 li>ul,
 li>ol {
     margin-bottom: 0;
     margin-left: 1.5em;
 }
-
 dt {
     font-weight: bold;
 }
-
 dd {
     margin: 0 1.5em 1.5em;
 }
-
 img {
     height: auto;
     max-width: 100%;
 }
-
 figure {
     margin: 1em 0;
 }
-
 a {
     color: royalblue;
     text-decoration: none;
 }
-
 a:visited {
     color: purple;
 }
-
 a:hover,
 a:focus,
 a:active {
     color: midnightblue;
 }
-
 a:focus {
     outline: thin dotted;
 }
-
 a:hover,
 a:active {
     outline: 0;
 }
-
 .screen-reader-text {
     border: 0;
     clip: rect(1px, 1px, 1px, 1px);
@@ -316,7 +295,6 @@ a:active {
     word-wrap: normal !important;
     /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
-
 .screen-reader-text:focus {
     background-color: #f1f1f1;
     border-radius: 3px;
@@ -338,64 +316,51 @@ a:active {
     z-index: 100000;
     /* Above WP toolbar. */
 }
-
 .alignleft {
     display: inline;
     float: left;
     margin-right: 1.5em;
 }
-
 .alignright {
     display: inline;
     float: right;
     margin-left: 1.5em;
 }
-
 .aligncenter {
     clear: both;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-
 .widget {
     margin: 0 0 1.5em;
 }
-
 .widget select {
     max-width: 100%;
 }
-
 .sticky {
     display: block;
 }
-
 .hentry {
     margin: 0 0 1.5em;
 }
-
 .updated:not(.published) {
     display: none;
 }
-
 .page-content,
 .entry-content,
 .entry-summary {
     margin: 1.5em 0 0;
 }
-
 .comment-content a {
     word-wrap: break-word;
 }
-
 .bypostauthor {
     display: block;
 }
-
 .infinity-end.neverending .site-footer {
     display: block;
 }
-
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
@@ -404,28 +369,23 @@ a:active {
     margin-top: 0;
     padding: 0;
 }
-
 embed,
 iframe,
 object {
     max-width: 100%;
 }
-
 .wp-caption {
     margin-bottom: 1.5em;
     max-width: 100%;
 }
-
 .wp-caption img[class*="wp-image-"] {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-
 .wp-caption .wp-caption-text {
     margin: 0.8075em 0;
 }
-
 .wp-caption-text {
     text-align: center;
 }
