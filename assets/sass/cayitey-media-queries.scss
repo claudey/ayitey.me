@@ -34,7 +34,7 @@
 
 @media (max-width: 600px) {
     .section--body {
-        padding: 6%;
+        padding: 5%;
     }
     .home--intro {
         background-size: contain;
@@ -54,17 +54,11 @@
 
 @media (max-width: 480px) {
     .projects--list {
-        display: inline-block;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px
     }
     .projects--list__item {
         float: left;
-        max-width: 45%;
-        margin: 0 9% 20px 0;
-        &:nth-child(2n) {
-            margin-right: 0;
-        }
-        &:nth-child(3n) {
-            // margin-right: unset;
-        }
+        margin-bottom: 20px;
     }
 }
