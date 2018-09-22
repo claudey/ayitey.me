@@ -24,7 +24,7 @@ get_header(); ?>
             
             <!-- FIRST SECTION - Name, Description -->
             <section class="home--intro">
-                <h2 class="header--title home--intro__heading">Claude Ayitey</h2>
+                <h1 class="header--title home--intro__heading">Claude Ayitey</h1>
                 <span class="home--intro__content">
                     <?php echo $bio_content; ?>
                 </span>
