@@ -63,6 +63,10 @@
 @media (max-width: 480px) {
     .projects--list {
         grid-template-columns: 1fr 1fr;
-        grid-gap: 6%;
+        grid-gap: 10px
+    }
+    .projects--list__item {
+        float: left;
+        margin-bottom: 20px;
     }
 }
