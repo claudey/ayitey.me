@@ -13,7 +13,6 @@
 	<?php the_title( '<h1 class="section--title section--title__wine">', '</h1>' ); ?>
 	
 	<div class="section--body">
-		<?php claude_ayitey_post_thumbnail(); ?>
 		<div class="entry-meta">
             <?php claude_ayitey_posted_on(); ?>
 		</div><!-- .entry-meta -->
@@ -28,4 +27,3 @@
 				) );
 			?>
 		</div><!-- .entry-content -->
-</article><!-- #post-<?php the_ID(); ?> -->

@@ -142,14 +142,8 @@ function custom_post_type() {
         'label'               => __( 'projects', 'claude-ayitey' ),
         'description'         => __( 'Projects', 'claude-ayitey' ),
         'labels'              => $labels,
-        // Features this CPT supports in Post Editor
-        'supports'            => array( 'title', 'editor', 'thumbnail', 'revisions'),
-        // You can associate this CPT with a taxonomy or custom taxonomy.
+        'supports'            => array( 'title', 'comments', 'editor', 'thumbnail', 'revisions', 'post-templates'),
         'taxonomies'          => array( 'projects' ),
-        /* A hierarchical CPT is like Pages and can have
-        * Parent and child items. A non-hierarchical CPT
-        * is like Posts.
-        */ 
         'hierarchical'        => false,
         'public'              => true,
         'show_ui'             => true,
@@ -166,9 +160,5 @@ function custom_post_type() {
     // Registering your Custom Post Type
     register_post_type( 'projects', $args );
  }
-/* Hook into the 'init' action so that the function
-* Containing our post type registration is not
-* unnecessarily executed.
-*/
 
 add_action( 'init', 'custom_post_type', 0 );

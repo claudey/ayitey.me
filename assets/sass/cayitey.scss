@@ -60,7 +60,7 @@ h1 {
 h2 {
     font-size: 2em;
     font-weight: bold;
-    margin: 0.2em 0 0 6%;
+    margin: 0.2em 0 0 2%;
 }
 
 section {
@@ -74,8 +74,6 @@ section {
 
 .section--header {
     width: 100%;
-    height: 400px;
-    background-size: cover;
 }
 
 .section--title {
@@ -148,6 +146,25 @@ blockquote {
 p img {
     max-width: 840px;
     margin: 0 auto;
+}
+
+.disqus--area {
+    padding: 5% 5% 0;
+}
+
+.load--disqus {
+    background: $ca-dblue;
+    margin: 0 auto;
+    display: block;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    color: #fff;
+    transition: all ease 0.35ms;
+    &:hover {
+        cursor: pointer;
+        background: $ca-mauve;
+    }
 }
 
 @import "cayitey-home";

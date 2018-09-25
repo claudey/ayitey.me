@@ -13,21 +13,23 @@ get_header(); ?>
 		<main id="main" class="site-main">
 
 		<section>
-		<?php
-		while ( have_posts() ) : the_post();
+			<?php
+			while ( have_posts() ) : the_post();
 
-			get_template_part( 'template-parts/content', 'post-single' );
+				get_template_part( 'template-parts/content', 'post-single' );
 
-			// the_post_navigation();
+				// the_post_navigation();
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			// if ( comments_open() || get_comments_number() ) :
-			// 	comments_template();
-			// endif;
+				// If comments are open or we have at least one comment, load up the comment template.
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
+				endif;
 
-		endwhile; // End of the loop.
-		?>
-		</div>
+			endwhile; // End of the loop.
+			?>
+			</div>
+</article><!-- #post-<?php the_ID(); ?> -->
+
 		</section>
 
 		</main><!-- #main -->

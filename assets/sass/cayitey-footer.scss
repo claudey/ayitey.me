@@ -3,20 +3,20 @@ footer {
     text-align: center;
 }
 
+.copy-left {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
 .social--links {
-    display: block;
-    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 12px;
+    margin: 0 auto;
+    width: 161px;
 }
 
 .social--icon {
     width: 45px;
     height: 45px;
-}
-
-.social--icon__twitter {
-    margin-left: 5px
-}
-
-.social--icon__dribbble {
-    margin-left: 5px
 }

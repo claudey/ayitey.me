@@ -33,6 +33,10 @@
 }
 
 @media (max-width: 600px) {
+    .section--title {
+        padding: 0.3em 2em 0.3em 0.5em;
+        font-size: 2em;
+    }
     .section--body {
         padding: 5%;
     }
@@ -49,6 +53,10 @@
     .home--intro__content {
         padding: 5%;
         margin: 0;
+    }
+    .entry-content li {
+        margin-left: 0.5em;
+        margin-right: 10%;
     }
 }
 

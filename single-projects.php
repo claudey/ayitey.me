@@ -30,17 +30,16 @@ get_header(); ?>
 						) );
 					?>
 					</div><!-- .entry-content -->
-				</div><!-- .section--body -->
-
-			<?php 
+					
+					<?php 
 				// the_post_navigation();
-
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
+				
+				// if ( comments_open() || get_comments_number() ) :
 					comments_template();
-				endif;
-
-			endwhile; ?>
+				// endif; ?>
+				
+			</div><!-- .section--body -->
+			<?php endwhile; ?>
 		</section>
 		</main><!-- #main -->
 	</div><!-- #primary -->
